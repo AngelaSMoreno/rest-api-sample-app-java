@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>PayPal sample REST Application</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/jsp/error.jsp</location>
+	</error-page>
+	
+	
+	<servlet>
+		<description>cancelpayment</description>
+		<display-name>cancelpayment</display-name>
+		<servlet-name>cancelpayment</servlet-name>
+		<servlet-class>com.paypal.controller.PaymentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cancelpayment</servlet-name>
+		<url-pattern>/cancelpayment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>executepayment</description>
+		<display-name>executepayment</display-name>
+		<servlet-name>executepayment</servlet-name>
+		<servlet-class>com.paypal.controller.PaymentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>executepayment</servlet-name>
+		<url-pattern>/executepayment</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>placeorder</description>
+		<display-name>placeorder</display-name>
+		<servlet-name>placeorder</servlet-name>
+		<servlet-class>com.paypal.controller.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>placeorder</servlet-name>
+		<url-pattern>/placeorder</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>showorders</description>
+		<display-name>showorders</display-name>
+		<servlet-name>showorders</servlet-name>
+		<servlet-class>com.paypal.controller.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>showorders</servlet-name>
+		<url-pattern>/showorders</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>pay</description>
+		<display-name>pay</display-name>
+		<servlet-name>pay</servlet-name>
+		<servlet-class>com.paypal.controller.PaymentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pay</servlet-name>
+		<url-pattern>/pay</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>signup</description>
+		<display-name>signup</display-name>
+		<servlet-name>signup</servlet-name>
+		<servlet-class>com.paypal.controller.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>signup</servlet-name>
+		<url-pattern>/signup</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>signout</description>
+		<display-name>signout</display-name>
+		<servlet-name>signout</servlet-name>
+		<servlet-class>com.paypal.controller.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>signout</servlet-name>
+		<url-pattern>/signout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>signin</description>
+		<display-name>signin</display-name>
+		<servlet-name>signin</servlet-name>
+		<servlet-class>com.paypal.controller.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>signin</servlet-name>
+		<url-pattern>/signin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>profile</description>
+		<display-name>profile</display-name>
+		<servlet-name>profile</servlet-name>
+		<servlet-class>com.paypal.controller.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>profile</servlet-name>
+		<url-pattern>/profile</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>home</description>
+		<display-name>home</display-name>
+		<servlet-name>home</servlet-name>
+		<servlet-class>com.paypal.controller.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+</web-app>
