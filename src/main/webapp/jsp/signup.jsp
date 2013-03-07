@@ -9,8 +9,6 @@
     <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>PizzaShop</title>
-    <meta content="authenticity_token" name="csrf-param" />
-    <meta content="ldNYASxRj3d4z7aSLVOISQHfst5yH7GrxA8WpkPa2CI=" name="csrf-token" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
@@ -24,13 +22,15 @@
     <div class='container' id='content'>
       
       <h2>Sign up</h2>
+	  <p>Sign up for a new PizzaShop account.</p>
       <form accept-charset="UTF-8" class="simple_form form-horizontal new_user" id="new_user" method="post" novalidate="novalidate">
 
       	<div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ldNYASxRj3d4z7aSLVOISQHfst5yH7GrxA8WpkPa2CI=" /></div>
-        <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input autofocus="autofocus" class="string email required" id="user_email" name="user_email" size="50" type="email" value="" /></div></div>
+        <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input autofocus="autofocus" class="string email required" id="user_email" name="user_email" size="50" type="email" value="" placeholder="dummy@email.com" /></div></div>
         <div class="control-group password required"><label class="password required control-label" for="user_password"><abbr title="required">*</abbr> Password</label><div class="controls"><input class="password required" id="user_password" name="user_password" size="50" type="password" /></div></div>
         <div class="control-group password required"><label class="password required control-label" for="user_password_confirmation"><abbr title="required">*</abbr> Password confirmation</label><div class="controls"><input class="password required" id="user_password_confirmation" name="user_password_confirmation" size="50" type="password" /></div></div>
-        <legend>Add Credit Card</legend>
+        <legend>Add Credit Card (Optional)</legend>
+		<p>Your credit card information is stored safely with PayPal.</p>
         <div class="control-group select required"><label class="select required control-label" for="user_credit_card_type"><abbr title="required">*</abbr> Type</label><div class="controls"><select class="select required" id="user_credit_card_type" name="credit_card_type"><option value=""></option>
         <option value="visa">visa</option>
         <option value="mastercard">master</option></select></div></div>

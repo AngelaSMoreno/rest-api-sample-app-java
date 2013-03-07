@@ -7,8 +7,6 @@
     <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>PizzaShop</title>
-    <meta content="authenticity_token" name="csrf-param" />
-    <meta content="ldNYASxRj3d4z7aSLVOISQHfst5yH7GrxA8WpkPa2CI=" name="csrf-token" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
@@ -23,8 +21,9 @@
     <div class='container' id='content'>
       
       <h2>Sign in</h2>
+	  <p>Sign in with your PizzaShop account. Don't have an account yet? <a href="signup">Sign up</a> for one.</p>
       <form accept-charset="UTF-8" class="simple_form form-horizontal new_user" id="new_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ldNYASxRj3d4z7aSLVOISQHfst5yH7GrxA8WpkPa2CI=" /></div>
-        <div class="control-group email optional"><label class="email optional control-label" for="user_email">Email</label><div class="controls"><input autofocus="autofocus" class="string email optional" id="user_email" name="user_email" size="50" type="email" value="" /></div></div>
+        <div class="control-group email optional"><label class="email optional control-label" for="user_email">Email</label><div class="controls"><input autofocus="autofocus" class="string email optional" id="user_email" name="user_email" size="50" type="email" value="" placeholder="dummy@email.com"/></div></div>
         <div class="control-group password optional"><label class="password optional control-label" for="user_password">Password</label><div class="controls"><input class="password optional" id="user_password" name="user_password" size="50" type="password" /></div></div>
 
         <div class='form-actions'>
@@ -32,9 +31,6 @@
         </div>
       </form>
       
-        <a href="signup">Sign up</a><br />
-      
-       <!-- <a href="/users/password/new">Forgot your password?</a><br />  --> 
     </div>
   
    <jsp:include page="footer.jsp"/>

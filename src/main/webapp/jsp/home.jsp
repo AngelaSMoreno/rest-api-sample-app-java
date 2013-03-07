@@ -9,8 +9,6 @@
     <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>PizzaShop</title>
-    <meta content="authenticity_token" name="csrf-param" />
-    <meta content="ldNYASxRj3d4z7aSLVOISQHfst5yH7GrxA8WpkPa2CI=" name="csrf-token" />
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
@@ -190,6 +188,18 @@
             <a href="placeorder?orderAmount=20.00&orderDescription=Pizza18" class="btn btn-small" data-disable-with="Procesing.." data-method="post" rel="nofollow">Buy</a>
           </div>
         </div>
+      </div>
+      <br/><br/><br/>
+      <div class="row">
+          <div class="span6 offset3">
+            <p>This is a sample application which showcases the new PayPal REST APIs. The app uses mock data to demonstrate how you can
+use the REST APIs for</p>
+            <ul>
+                <li>Saving credit card information with PayPal for later use.</li>
+                <li>Making payments using a saved credit card.</li>
+                <li>Making payments using PayPal.</li>
+            </ul>
+            </div>
       </div>
     </div>
    
