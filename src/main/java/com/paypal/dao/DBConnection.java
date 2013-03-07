@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import com.paypal.controller.PaymentServlet;
 import com.paypal.core.ConfigManager;
 import com.paypal.core.LoggingManager;
+import com.paypal.util.AppConstants;
 
 /**
  * <code>DBConnection</code> manages connections for the sample application. It
@@ -31,8 +32,8 @@ public class DBConnection {
 		}
 		try {
 			
-			//Database path configured in properties file
-			String dbPath = ConfigManager.getInstance().getValue("dbPath");
+			//Database path
+			String dbPath = System.getProperty("user.home") + "\\" + AppConstants.DBNAME;
 			
 			// Initialize the connection
 			con = DriverManager

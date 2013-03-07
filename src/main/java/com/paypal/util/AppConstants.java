@@ -30,5 +30,6 @@ public class AppConstants {
 	public static final String PAYPAL = "paypal";
 	public static final String CREDIT_CARD = "credit_card";
 	public static final String UTF_8 = "UTF-8";
+	public static final String DBNAME = "testpaymentdb";
 	
 }

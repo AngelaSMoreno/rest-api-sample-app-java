@@ -19,8 +19,8 @@ Pre-requisites
 Running the app
 ---------------
 
-   * Change the dbPath parameter to point to any convenient folder location. Ex: if the configuration looks like dbPath=C:/PaymentDB/testpaymentdb, 'PaymentDB' is the name of folder you should create, database 'testpaymentdb' will be created by the application.
    * Configure the service.EndPoint, clientID and clientSecret to appropriate values.
+   * Execute the command 'mvn jetty:run' to deploy and run the app using maven jetty server plugin. (OR)
    * Run 'mvn clean package' to build and create 'rest-api-sample-app-java-1.0.war' file under the target directory.
    * Deploy the rest-api-sample-app-java-1.0.war to your favourite servlet container.
    * You are ready. Bring up http://localhost:<port>/rest-api-sample-app-java-1.0 on your favourite browser.	
