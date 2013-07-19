@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.paypal.api.payments.Link;
+import com.paypal.api.payments.Links;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.PaymentExecution;
 import com.paypal.core.LoggingManager;
@@ -218,8 +218,8 @@ public class PaymentServlet extends HttpServlet {
 	private String getApprovalURL(Payment payment)
 			throws UnsupportedEncodingException {
 		String redirectUrl = null;
-		List<Link> links = payment.getLinks();
-		for (Link l : links) {
+		List<Links> links = payment.getLinks();
+		for (Links l : links) {
 			if (l.getRel().equalsIgnoreCase("approval_url")) {
 				redirectUrl = URLDecoder
 						.decode(l.getHref(), AppConstants.UTF_8);

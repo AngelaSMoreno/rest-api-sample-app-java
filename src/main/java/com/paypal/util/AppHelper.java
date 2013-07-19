@@ -7,9 +7,9 @@ import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
 
 import com.paypal.api.payments.Amount;
-import com.paypal.api.payments.AmountDetails;
 import com.paypal.api.payments.CreditCard;
 import com.paypal.api.payments.CreditCardToken;
+import com.paypal.api.payments.Details;
 import com.paypal.api.payments.FundingInstrument;
 import com.paypal.api.payments.Payer;
 import com.paypal.api.payments.Payment;
@@ -36,8 +36,8 @@ public class AppHelper {
 		cardDetail.setCvv(creditcard.getCvv2());
 		cardDetail.setNumber(creditcard.getNumber());
 		cardDetail.setType(creditcard.getType());
-		cardDetail.setExpMonth(creditcard.getExpireMonth());
-		cardDetail.setExpYear(creditcard.getExpireYear());
+		cardDetail.setExpMonth(Integer.toString(creditcard.getExpireMonth()));
+		cardDetail.setExpYear(Integer.toString(creditcard.getExpireYear()));
 
 		return cardDetail;
 	}
@@ -53,8 +53,8 @@ public class AppHelper {
 
 		String accessToken = AccessTokenGenerator.getAccessToken();
 		CreditCard creditCard = new CreditCard();
-		creditCard.setExpireMonth(request.getParameter("expire_month").trim());
-		creditCard.setExpireYear(request.getParameter("expire_year").trim());
+		creditCard.setExpireMonth(Integer.parseInt(request.getParameter("expire_month").trim()));
+		creditCard.setExpireYear(Integer.parseInt(request.getParameter("expire_year").trim()));
 		creditCard.setNumber(request.getParameter("credit_card_number").trim());
 		creditCard.setType(request.getParameter("credit_card_type").trim());
 		creditCard.setCvv2(request.getParameter("credit_card_cvv2").trim());
@@ -78,7 +78,7 @@ public class AppHelper {
 		// This will involve PayPal redirection , where user authorization is
 		// required
 		if (AppConstants.PAYPAL.equalsIgnoreCase(order.getPaymentMethod())) {
-			AmountDetails amountDetails = new AmountDetails();
+			Details amountDetails = new Details();
 			amountDetails.setShipping(order.getShipping());
 			amountDetails.setSubtotal(order.getOrderAmount());
 			amountDetails.setTax(order.getTax());
@@ -112,7 +112,7 @@ public class AppHelper {
 
 		// Create a payment object using credit card as a payment method
 		if (AppConstants.CREDIT_CARD.equalsIgnoreCase(order.getPaymentMethod())) {
-			AmountDetails amountDetails = new AmountDetails();
+			Details amountDetails = new Details();
 			amountDetails.setShipping(order.getShipping());
 			amountDetails.setSubtotal(order.getOrderAmount());
 			amountDetails.setTax(order.getTax());

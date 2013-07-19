@@ -29,7 +29,7 @@
         <div class="control-group email required"><label class="email required control-label" for="user_email"><abbr title="required">*</abbr> Email</label><div class="controls"><input autofocus="autofocus" class="string email required" id="user_email" name="user_email" size="50" type="email" value="" placeholder="dummy@email.com" /></div></div>
         <div class="control-group password required"><label class="password required control-label" for="user_password"><abbr title="required">*</abbr> Password</label><div class="controls"><input class="password required" id="user_password" name="user_password" size="50" type="password" /></div></div>
         <div class="control-group password required"><label class="password required control-label" for="user_password_confirmation"><abbr title="required">*</abbr> Password confirmation</label><div class="controls"><input class="password required" id="user_password_confirmation" name="user_password_confirmation" size="50" type="password" /></div></div>
-        <legend>Add Credit Card (Optional)</legend>
+        <legend>Add Credit Card</legend>
 		<p>Your credit card information is stored safely with PayPal.</p>
         <div class="control-group select required"><label class="select required control-label" for="user_credit_card_type"><abbr title="required">*</abbr> Type</label><div class="controls"><select class="select required" id="user_credit_card_type" name="credit_card_type"><option value=""></option>
         <option value="visa">visa</option>
