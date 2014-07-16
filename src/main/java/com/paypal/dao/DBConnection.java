@@ -1,5 +1,6 @@
 package com.paypal.dao;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -33,7 +34,7 @@ public class DBConnection {
 		try {
 			
 			//Database path
-			String dbPath = System.getProperty("user.home") + "\\" + AppConstants.DBNAME;
+			String dbPath = System.getProperty("user.home") + File.separator + AppConstants.DBNAME;
 			
 			// Initialize the connection
 			con = DriverManager
